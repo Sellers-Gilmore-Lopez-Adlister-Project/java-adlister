@@ -39,6 +39,20 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public List<Ad> allFromUser(Long id) {
+       PreparedStatement stmt = null;
+       try{
+           stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id = ?" );
+           stmt.setLong(1,id);
+           ResultSet rs = stmt.executeQuery();
+           return createAdsFromResults(rs);
+       }
+       catch (SQLException e){
+           throw new RuntimeException("error retrieving ads", e);
+       }
+    }
+
+    @Override
     public Long insert(Ad ad) {
         try {
             String insertQuery = "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
