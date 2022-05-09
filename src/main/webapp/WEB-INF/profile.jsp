@@ -12,7 +12,6 @@
     <div class="container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
     </div>
-    <p> ${sessionScope.user.email}</p>
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">

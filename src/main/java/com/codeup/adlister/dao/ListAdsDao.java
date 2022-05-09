@@ -28,7 +28,7 @@ public class ListAdsDao implements Ads {
     }
 
     @Override
-    public List<Ad> allFromUser() {
+    public List<Ad> allFromUser(Long id) {
         if (ads == null) {
             ads = generateAds();
         }
