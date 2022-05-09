@@ -16,9 +16,9 @@
         <%-- Right Side - Login/Logout --%>
         <ul class="nav navbar-nav navbar-right h-100 p-0 m-0 ">
             <%--Add an Ad--%>
-            <li><a href="/create" class="p-0 m-0 h-100" title="Create an ad"><span class="h-100 p-0 m-0  glyphicon glyphicon-plus-sign"></span> Create a ad</a></li>
+            <li><a href="/ads/create" class="p-0 m-0 h-100" title="Create an ad"><span class="h-100 p-0 m-0  glyphicon glyphicon-plus-sign"></span> Create a ad</a></li>
             <%--Logout--%>
-            <li class="h-100"><a href="/logout"><span class="h-100 p-0 m-0 glyphicon glyphicon-log-out"></span>Log out</a></li>
+            <li class="h-100"><a href="/logout"><span class="h-100 p-0 m-0 glyphicon glyphicon-log-out"></span> Log out</a></li>
         </ul>
     </div>
 </nav>
