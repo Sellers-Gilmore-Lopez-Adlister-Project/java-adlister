@@ -55,6 +55,22 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+//    @Override
+//    public Ad findAd(long id){
+//
+//        String selectQuery = "SELECT * FROM ads";
+//        try {
+//        Statement stmt = connection.createStatement();
+//        ResultSet rs = stmt.executeQuery(selectQuery);
+//
+//        while (rs.next()){
+//            System.out.println(rs.getLong("id"));
+//        }
+//        } catch (SQLException e){
+//            e.printStackTrace();
+//        }
+//    }
+
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
