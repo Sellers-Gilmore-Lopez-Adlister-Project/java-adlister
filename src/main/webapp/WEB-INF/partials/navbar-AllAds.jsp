@@ -9,7 +9,7 @@
         <%-- Right Side - Login/Logout --%>
         <ul class="nav navbar-nav navbar-right h-100 p-0 m-0 ">
             <%--Create a user--%>
-            <li><a href="/register" title="Create a user"><span class="glyphicon glyphicon-plus-sign"></span> Create a User</a></li>
+            <li><a href="/register"  title="Create a user"><span class="glyphicon glyphicon-plus-sign"></span> Create a User</a></li>
             <%--Login--%>
             <li><a href="/profile" title="Profile"><span class="p-0 m-0 glyphicon glyphicon-user"></span> Profile</a></li>
         </ul>
