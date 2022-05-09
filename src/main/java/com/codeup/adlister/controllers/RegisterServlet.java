@@ -1,6 +1,7 @@
 package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
+import com.codeup.adlister.dao.Users;
 import com.codeup.adlister.models.User;
 
 import javax.servlet.ServletException;
@@ -17,25 +18,44 @@ public class RegisterServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Users usersDao = DaoFactory.getUsersDao();
+
+        // TODO: ensure the submitted information is valid
         String username = request.getParameter("username");
-        String email = request.getParameter("email");
         String password = request.getParameter("password");
         String passwordConfirmation = request.getParameter("confirm_password");
+        String email = request.getParameter("email");
 
-        // validate input
-        boolean inputHasErrors = username.isEmpty()
-            || email.isEmpty()
-            || password.isEmpty()
-            || (! password.equals(passwordConfirmation));
+        boolean fieldsNotNull = false;
+        boolean fieldsNotEmpty = false;
+        boolean usernameDoesntExist = false;
+        boolean passwordsMatch = false;
 
-        if (inputHasErrors) {
-            response.sendRedirect("/register");
-            return;
+        //TODO: check to make sure only new usernames registered
+        //call Dao factory to search if username exists
+        User existingUser = usersDao.findByUsername(username);
+        if (existingUser == null){
+            usernameDoesntExist = true;
         }
 
-        // create and save a new user
-        User user = new User(username, email, password);
-        DaoFactory.getUsersDao().insert(user);
-        response.sendRedirect("/login");
+        if (password.equals(passwordConfirmation)){
+            passwordsMatch = true;
+        }
+
+        if (username != null && email != null && password != null){
+            fieldsNotNull = true;
+        }
+
+        if (!username.isEmpty() && !email.isEmpty() && !password.isEmpty()){
+            fieldsNotEmpty = true;
+        }
+        // TODO: create a new user based off of the submitted information
+        if(fieldsNotEmpty && fieldsNotNull && usernameDoesntExist && passwordsMatch){
+            User createUser = new User(username,email,password);
+            usersDao.insert(createUser);
+            response.sendRedirect("/login?success");
+        } else {
+            response.sendRedirect("/register?errors");
+        }
     }
 }
