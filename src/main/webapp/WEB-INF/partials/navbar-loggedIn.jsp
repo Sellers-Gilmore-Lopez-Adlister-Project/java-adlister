@@ -1,24 +1,18 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: heygilly
-  Date: 5/9/22
-  Time: 2:43 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%--Navigation--%>
-<nav class="navbar container-fluid rounded-0 p-0 m-0 " style="background: rgba(161,234,234,0.35);">
-    <div class="container p-0 m-0 ">
+<nav class="navbar container-fluid" style="background: rgb(247,246,255);">
+    <div class="container">
         <%-- Navigation Header--%>
-        <div class="navbar-header p-0 m-0 ">
+        <div class="navbar-header">
             <%--Header--%>
-            <a class="navbar-brand" href="/ads">Adlister</a>
+            <a class="navbar-brand text-dark text-uppercase" style="font-weight:800"; title="Adlister" href="/ads">Adlister</a>
         </div>
         <%-- Right Side - Login/Logout --%>
-        <ul class="nav navbar-nav navbar-right h-100 p-0 m-0 ">
-            <%--Add an Ad--%>
-            <li><a href="/ads/create" class="p-0 m-0 h-100" title="Create an ad"><span class="h-100 p-0 m-0  glyphicon glyphicon-plus-sign"></span> Create a ad</a></li>
-            <%--Logout--%>
-            <li class="h-100"><a href="/logout"><span class="h-100 p-0 m-0 glyphicon glyphicon-log-out"></span> Log out</a></li>
-        </ul>
+        <div class="nav navbar-nav navbar-right d-flex flex-row align-items-center">
+            <%--Create a user--%>
+            <a href="/ads/create" class="pr-3 text-dark" title="Create a user"><i class="fa-solid fa-file-plus" title="Create an ad"></i></a>
+            <%--Login--%>
+            <a href="/logout" class="pl-3 text-dark" title="Log Out"><i class="fa-solid fa-right-from-bracket"></i> Log out</a>
+        </div>
     </div>
 </nav>
+
