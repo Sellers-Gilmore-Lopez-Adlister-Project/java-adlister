@@ -35,6 +35,13 @@ public class ListAdsDao implements Ads {
         return ads;
     }
 
+    @Override
+    public void destroy(Long id, String title) {
+        if (ads == null) {
+            ads = generateAds();
+        }
+    }
+
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
         ads.add(new Ad(

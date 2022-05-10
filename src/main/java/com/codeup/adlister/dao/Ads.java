@@ -11,5 +11,7 @@ public interface Ads {
     Long insert(Ad ad);
     //get a list of adds based on user
     List<Ad> allFromUser(Long id);
+    //Delete ad
+    void destroy(Long id,String title);
 
 }
