@@ -13,5 +13,7 @@ public interface Ads {
     List<Ad> allFromUser(Long id);
     //Delete ad
     void destroy(Long id,String title);
+    //Update ad
+    void updateAd(Long id,String originalTitle,String title,String description);
 
 }
