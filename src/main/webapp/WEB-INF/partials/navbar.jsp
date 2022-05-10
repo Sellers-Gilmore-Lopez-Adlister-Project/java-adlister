@@ -1,10 +1,10 @@
 <%--Navigation--%>
-<nav class="navbar container-fluid" style="background: rgb(247,246,255);">
+<nav class="navbar container-fluid" style="background: rgb(247,246,255);box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;">
     <div class="container">
         <%-- Navigation Header--%>
         <div class="navbar-header">
             <%--Header--%>
-            <a class="navbar-brand text-dark text-uppercase" style="font-weight:800"; title="Adlister" href="/ads">Adlister</a>
+            <a class="navbar-brand text-dark text-uppercase" style="font-weight:800" href="/ads">Adlister</a>
         </div>
         <%-- Right Side - Login/Logout --%>
         <div class="nav navbar-nav navbar-right d-flex flex-row align-items-center">
