@@ -30,7 +30,7 @@
                 <label for="confirm_password" class="text-dark loginLabel">Confirm Password</label>
                 <input id="confirm_password" name="confirm_password" class="form-control" type="password" minlength="6" maxlength="15">
             </div>
-            <input type="submit" class=" loginButton mx-auto btn btn-primary btn-block">
+            <input type="submit" class="loginButton mx-auto btn btn-primary btn-block">
             <p class="noAccountPara pt-2 text-center">Already a member? <a href="/login">Login</a> </p>
         </form>
     </div>
