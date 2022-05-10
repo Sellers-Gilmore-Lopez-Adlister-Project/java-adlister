@@ -1,8 +1,8 @@
 <title>${param.title}</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/5d0c1b436d.js" crossorigin="anonymous"></script>
-<style>
 
+<style>
     body{
         box-sizing: border-box;
         /*Crazy Background*/
@@ -62,7 +62,6 @@
         box-shadow: rgba(131, 192, 253, 0.5) 0 0 0 3px;
         outline: none;
     }
-
 
 
 </style>
