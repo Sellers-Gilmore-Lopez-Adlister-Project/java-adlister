@@ -22,8 +22,8 @@
         <form action="/ads/create" method="post">
             <div class="form-group">
                 <label for="title" class="text-dark">Title</label>
-                <input id="title" name="title" class="form-control" type="text" maxlength="50">
-                <p class="text-secondary"><small>Limit 50 chracters</small></p>
+                <input id="title" name="title" class="form-control" type="text" maxlength="45">
+                <p class="text-secondary"><small>Limit 45 chracters</small></p>
             </div>
             <div class="form-group">
                 <label for="description" class="text-dark">Description</label>
