@@ -7,7 +7,14 @@
     </jsp:include>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbar-AllAds.jsp" />
+
+<%--Navigation--%>
+<%--Changes when you are either logged in or logged out--%>
+<% if (request.getSession().getAttribute("user") == null) { %>
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<% } else { %>
+<jsp:include page="/WEB-INF/partials/navbar-loggedIn.jsp" />
+<% } %>
 
 <div class="container">
     <h1 class="text-center pt-3">Here Are all the ads!</h1>

@@ -5,6 +5,17 @@
         <jsp:param name="title" value="Create a new Ad" />
     </jsp:include>
 </head>
+
+<%--Navigation--%>
+<%--Changes when you are either logged in or logged out--%>
+<% if (request.getSession().getAttribute("user") == null) { %>
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<% } else { %>
+<jsp:include page="/WEB-INF/partials/navbar-loggedIn.jsp" />
+<% } %>
+
+
+
 <body>
     <div class="container">
         <h1>Create a new Ad</h1>
