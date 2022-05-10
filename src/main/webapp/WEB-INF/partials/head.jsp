@@ -10,6 +10,11 @@
         color: whitesmoke;
         height: 100vh;
     }
+    .adDescription{
+        height: 160px;
+        overflow: scroll;
+    }
+
     /*Login Form*/
     .formContainer{
         max-width: 420px;

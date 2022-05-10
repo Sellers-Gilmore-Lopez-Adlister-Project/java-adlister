@@ -17,16 +17,18 @@
 
 
 <body>
-    <div class="container">
+    <div class="container formContainer">
         <h1>Create a new Ad</h1>
         <form action="/ads/create" method="post">
             <div class="form-group">
-                <label for="title">Title</label>
-                <input id="title" name="title" class="form-control" type="text">
+                <label for="title" class="text-dark">Title</label>
+                <input id="title" name="title" class="form-control" type="text" maxlength="50">
+                <p class="text-secondary"><small>Limit 50 chracters</small></p>
             </div>
             <div class="form-group">
-                <label for="description">Description</label>
-                <textarea id="description" name="description" class="form-control" type="text"></textarea>
+                <label for="description" class="text-dark">Description</label>
+                <textarea id="description" name="description" class="form-control" type="text" maxlength="200"></textarea>
+                <p class="text-secondary"><small>Limit 200 chracters</small></p>
             </div>
             <input type="submit" class="btn btn-block btn-primary">
         </form>
