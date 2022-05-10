@@ -29,25 +29,41 @@
 
 <%--</div>--%>
 
+
+
 <%-----------Origina 2.0 ---------------%>
-<h1 class="text-center pt-5">Community Ad Board</h1>
-<div class="py-5">
+<%--Header--%>
+<h1 class="text-center m-5">Community Ad Board</h1>
+<%--Main Content--%>
+<main class="py-5">
     <div class="container">
         <div class="row">
             <c:forEach var="ad" items="${ads}">
-                <div class="col-md-4">
-                    <div class="card my-3 p-2" style=" height:240px;background: rgb(247,246,255);border-radius:12px;box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;">
+                <div class="col-md-4 col-sm-6 col-12 my-3">
+                    <div class="card h-100 p-4" style="background:rgb(247,246,255);border-radius:12px;box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;">
                         <div class="card-block">
-                            <h5 class="card-title text-dark text-center pt-2">${ad.title}</h5>
-                            <hr class="mx-auto w-75">
-                            <p class="card-text text-dark adDescription text-center">${ad.description}</p>
+                            <h4 class="card-title text-dark pb-2 m-0">${ad.title}</h4>
+                            <hr class="w-75 m-0 py-1">
+                            <p class="card-text py-1 text-dark">${ad.description}</p>
                         </div>
                     </div>
                 </div>
             </c:forEach>
         </div>
     </div>
-</div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </body>
