@@ -11,7 +11,7 @@
     <h1>Delete Ad</h1>
     <form action="/ads/delete" method="post">
         <div class="form-group">
-            <label for="title">Title</label>
+            <label for="title">Ad title</label>
             <input id="title" name="title" class="form-control" type="text">
         </div>
         <input type="submit" class="btn btn-block btn-primary">
