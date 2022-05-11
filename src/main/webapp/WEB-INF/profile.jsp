@@ -32,9 +32,9 @@
                     <div class="col-md-4 col-sm-6 col-12 my-3">
                         <div class="card h-100 p-4" style="background:rgb(247,246,255);border-radius:12px;box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;">
                             <div class="card-block">
-                                <section class="float-right ml-3">
-                                    <a href="/ads/update" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
-                                    <a href="/ads/delete" class="btn btn-primary"><i class="fa-solid fa-trash-can"></i></a>
+                                <section class="float-right">
+                                    <a href="/ads/update" class="btn" style="background: rgb(247,246,255);"><i class="fa-solid fa-pen-to-square"></i></a>
+                                    <a href="/ads/delete" class="btn" style="background: rgb(247,246,255);"><i class="fa-solid fa-trash-can"></i></a>
                                 </section>
                                 <h4 class="card-title text-dark pb-2 m-0">${ad.title}</h4>
                                 <hr class="w-75 m-0 py-1">
