@@ -11,9 +11,6 @@
         height: 100vh;
     }
 
-
-
-
     /*Login Form*/
     .formContainer{
         max-width: 420px;

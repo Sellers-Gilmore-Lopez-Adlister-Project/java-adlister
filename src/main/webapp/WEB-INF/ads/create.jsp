@@ -18,7 +18,8 @@
 
 <body>
     <div class="container formContainer">
-        <h1>Create a new Ad</h1>
+        <h1 class="text-center pt-2">Create a new Ad</h1>
+        <p class="text-center text-dark">Inform the community with the latest ads.</p>
         <form action="/ads/create" method="post">
             <div class="form-group">
                 <label for="title" class="text-dark">Title</label>
