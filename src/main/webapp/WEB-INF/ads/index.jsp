@@ -33,7 +33,7 @@
 
 <%-----------Origina 2.0 ---------------%>
 <%--Header--%>
-<h1 class="text-center m-5">Community Ad Board</h1>
+<h1 class="text-center m-5 text-white">Community Ad Board</h1>
 <%--Main Content--%>
 <main class="py-5">
     <div class="container">

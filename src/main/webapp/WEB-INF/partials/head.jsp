@@ -7,7 +7,6 @@
         box-sizing: border-box;
         /*Crazy Background*/
         background: linear-gradient(to right, #2a5298, #1e3c72);
-        color: whitesmoke;
         height: 100vh;
     }
 

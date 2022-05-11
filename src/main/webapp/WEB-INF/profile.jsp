@@ -19,10 +19,10 @@
 <%--    </c:forEach>--%>
 
 
-    <%-----------Origina 2.0 ---------------%>
+    <%-----------Original 2.0 ---------------%>
     <%--Header--%>
     <div class="container">
-        <h1 class="py-5 text-center">Welcome, ${sessionScope.user.username}!</h1>
+        <h1 class="py-5 text-center text-white">Welcome, ${sessionScope.user.username}!</h1>
     </div>
     <%--Main Content--%>
     <main class="py-5">

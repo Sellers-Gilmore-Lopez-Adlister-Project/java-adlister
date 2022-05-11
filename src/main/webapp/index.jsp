@@ -1,3 +1,4 @@
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -17,7 +18,7 @@
 
 
     <div class="container">
-        <h1 class="text-center mt-5 text-uppercase">Welcome to the Adlister!</h1>
+        <h1 class="text-center mt-5 text-uppercase text-white">Welcome to the Adlister!</h1>
     </div>
 </body>
 </html>
