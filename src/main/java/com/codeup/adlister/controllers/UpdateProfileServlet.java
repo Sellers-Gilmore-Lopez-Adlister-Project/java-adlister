@@ -40,7 +40,7 @@ public class UpdateProfileServlet extends HttpServlet {
         }
 
         if (newEmail.equals(confirmEmail) && usernameDoesntExist) {
-            DaoFactory.getAdsDao().updateProfile(id, newUsername, newEmail);
+            DaoFactory.getUsersDao().updateProfile(id, newUsername, newEmail);
             response.sendRedirect("/profile");
         } else {
             response.sendRedirect("/profile/update");

@@ -15,13 +15,6 @@ public class ListAdsDao implements Ads {
         return ads;
     }
 
-    @Override
-    public void updateProfile(Long id, String username, String email) {
-        if (ads == null) {
-            ads = generateAds();
-        }
-    }
-
     public Long insert(Ad ad) {
         // make sure we have ads
         if (ads == null) {

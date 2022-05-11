@@ -7,8 +7,6 @@ import java.util.List;
 public interface Ads {
     // get a list of all the ads
     List<Ad> all();
-    //pdate profile info
-    void updateProfile(Long id, String username, String email);
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
     //get a list of adds based on user
