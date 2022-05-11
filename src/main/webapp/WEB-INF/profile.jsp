@@ -29,7 +29,7 @@
         <div class="container">
             <div class="row">
                 <c:forEach var="ad" items="${ads}">
-                    <div class="col-md-4 col-sm-6 col-12 my-3">
+                    <div class="col-lg-4 col-sm-6 col-12 my-3">
                         <div class="card h-100 p-4" style="background:rgb(247,246,255);border-radius:12px;box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;">
                             <div class="card-block">
                                 <section class="float-right">

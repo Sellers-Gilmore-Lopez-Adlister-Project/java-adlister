@@ -12,8 +12,7 @@
             <a href="/profile" class="btn" style="margin-top:1em;background: rgb(247,246,255);font-size: 20px;"><i class="fa-solid fa-arrow-left"></i></a>
             <%----- Header  --%>
             <h1 class="text-center pt-2">Create a new Ad</h1>
-            <p class="text-center
-">Inform the community with the latest ads.</p>
+            <p class="text-center">Inform the community with the latest ads.</p>
             <%----- Form  --%>
             <form action="/ads/create" method="post">
                 <%----- Title of ad --%>
