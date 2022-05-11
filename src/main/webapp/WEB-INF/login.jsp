@@ -24,7 +24,7 @@
                            class="form-control loginInput"
                            type="text"
                            minlength="4" maxlength="15"
-                           title="letters and numbers only, no punctuation or special characters"
+                           title="letters and numbers only, no punctuation or special characters, and between 4 - 15 characters"
                            pattern="[A-Za-z0-9]+"
                            required>
                 </div>

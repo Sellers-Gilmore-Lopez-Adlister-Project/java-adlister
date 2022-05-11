@@ -1,3 +1,7 @@
+<%--
+This page is when click on 'ADLISTER', you will see all ads that is in out database.
+--%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -39,7 +43,7 @@
     <div class="container">
         <div class="row">
             <c:forEach var="ad" items="${ads}">
-                <div class="col-md-4 col-sm-6 col-12 my-3">
+                <div class="col-lg-4 col-sm-6 col-12 my-3">
                     <div class="card h-100 p-4" style="background:rgb(247,246,255);border-radius:12px;box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;">
                         <div class="card-block">
                             <h4 class="card-title text-dark pb-2 m-0">${ad.title}</h4>

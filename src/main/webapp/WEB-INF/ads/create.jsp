@@ -6,31 +6,47 @@
     </jsp:include>
 </head>
 <body>
+    <%----- Form Container  --%>
     <div class="container formContainer">
-        <a href="/profile" class="btn" style="margin-top:2em;background: rgb(247,246,255);font-size: 20px;"><i class="fa-solid fa-arrow-left"></i></a>
-        <h1 class="text-center pt-2">Create a new Ad</h1>
-        <p class="text-center text-dark">Inform the community with the latest ads.</p>
-        <form action="/ads/create" method="post">
-            <div class="form-group">
-                <label for="title" class="text-dark loginLabel">Title</label>
-                <input id="title"
-                       name="title"
-                       class="form-control"
-                       type="text"
-                       minlength="3"
-                       maxlength="45"
-                       pattern="^[a-zA-Z][a-zA-Z0-9-_.]{5,12}$"
-                       title="Title should be a min of 3 and a max of 45 characters"
-                       required>
-                <p class="text-secondary"><small>Limit 45 characters</small></p>
-            </div>
-            <div class="form-group">
-                <label for="description" class="text-dark">Description</label>
-                <textarea id="description" name="description" class="form-control" type="text" maxlength="200" required></textarea>
-                <p class="text-secondary"><small>Limit 200 characters</small></p>
-            </div>
-            <input type="submit" class="btn btn-block btn-primary loginButton" value="Create user">
-        </form>
+        <%----- Back Button to take to /profile  --%>
+            <a href="/profile" class="btn" style="margin-top:1em;background: rgb(247,246,255);font-size: 20px;"><i class="fa-solid fa-arrow-left"></i></a>
+            <%----- Header  --%>
+            <h1 class="text-center pt-2">Create a new Ad</h1>
+            <p class="text-center">Inform the community with the latest ads.</p>
+            <%----- Form  --%>
+            <form action="/ads/create" method="post">
+                <%----- Title of ad --%>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input id="title"
+                           name="title"
+                           class="form-control loginInput"
+                           type="text"
+                           maxlength="45"
+                           title="letters and numbers only, no punctuation or special characters, and between 4 - 45 characters"
+                           pattern="[A-Za-z0-9]+"
+                           required>
+                    <p class="text-secondary">
+                        <small>letters and numbers only, no punctuation or special characters, and between 4 - 45 characters</small>
+                    </p>
+                </div>
+                <%----- Description of Ad  --%>
+                <div class="form-group">
+                    <label for="description" class="">Description</label>
+                    <textarea id="description"
+                              name="description"
+                              class="form-control"
+                              type="text"
+                              minlength="3" maxlength="200"
+                              required>
+                    </textarea>
+                    <p class="text-secondary">
+                        <small>Limit 200 characters</small>
+                    </p>
+                </div>
+                <%----- Submit Button of Ad  --%>
+                <input type="submit" class="btn btn-block btn-primary loginButton" value="Create Ad">
+            </form>
     </div>
 </body>
 
