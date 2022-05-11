@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="formContainer container">
-    <a href="/profile" class="btn" style="padding-top:2em;background: rgb(247,246,255);font-size: 20px;"><i class="fa-solid fa-arrow-left"></i></a>
+    <a href="/profile" class="btn" style="margin-top:2em;background: rgb(247,246,255);font-size: 20px;"><i class="fa-solid fa-arrow-left"></i></a>
 
     <h1 class="text-center" >Delete Ad</h1>
     <%--    Warning--%>

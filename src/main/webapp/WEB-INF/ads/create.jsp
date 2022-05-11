@@ -5,19 +5,10 @@
         <jsp:param name="title" value="Create a new Ad" />
     </jsp:include>
 </head>
-
-<%--Navigation--%>
-<%--Changes when you are either logged in or logged out--%>
-<% if (request.getSession().getAttribute("user") == null) { %>
-<jsp:include page="/WEB-INF/partials/navbar.jsp" />
-<% } else { %>
-<jsp:include page="/WEB-INF/partials/navbar-loggedIn.jsp" />
-<% } %>
-
-
-
 <body>
+
     <div class="container formContainer">
+        <a href="/profile" class="btn" style="margin-top:2em;background: rgb(247,246,255);font-size: 20px;"><i class="fa-solid fa-arrow-left"></i></a>
         <h1 class="text-center pt-2">Create a new Ad</h1>
         <p class="text-center text-dark">Inform the community with the latest ads.</p>
         <form action="/ads/create" method="post">
@@ -31,7 +22,8 @@
                 <textarea id="description" name="description" class="form-control" type="text" maxlength="200"></textarea>
                 <p class="text-secondary"><small>Limit 200 chracters</small></p>
             </div>
-            <input type="submit" class="btn btn-block btn-primary">
+            <input type="submit" class="btn btn-block btn-primary loginButton" value="Create user">
+
         </form>
     </div>
 </body>

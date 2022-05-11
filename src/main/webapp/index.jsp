@@ -17,7 +17,7 @@
 
 
     <div class="container">
-        <h1>Welcome to the Adlister!</h1>
+        <h1 class="text-center mt-5 text-uppercase">Welcome to the Adlister!</h1>
     </div>
 </body>
 </html>
