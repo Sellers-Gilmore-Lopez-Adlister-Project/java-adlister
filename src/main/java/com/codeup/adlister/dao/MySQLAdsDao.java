@@ -81,20 +81,6 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    @Override
-    public void updateProfile(Long id, String username, String email) {
-        PreparedStatement stmt = null;
-        try {
-            String query = "UPDATE users SET username = ?, email = ? WHERE (id = ?)";
-            stmt = connection.prepareStatement(query);
-            stmt.setString(1,username);
-            stmt.setString(2,email);
-            stmt.setLong(3,id);
-            stmt.executeUpdate();
-        } catch (SQLException e){
-            throw new RuntimeException("error updating profile", e);
-        }
-    }
 
     @Override
     public Long insert(Ad ad) {
