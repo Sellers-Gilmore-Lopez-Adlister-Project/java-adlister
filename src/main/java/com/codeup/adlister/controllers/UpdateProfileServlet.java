@@ -1,6 +1,7 @@
 package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
+import com.codeup.adlister.dao.Users;
 import com.codeup.adlister.models.User;
 
 import javax.servlet.*;
@@ -22,14 +23,23 @@ public class UpdateProfileServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Users usersDao = DaoFactory.getUsersDao();
+        boolean usernameDoesntExist = false;
+
+
+
         User user = (User) request.getSession().getAttribute("user");
         Long id = user.getId();
         System.out.println(id);
         String newUsername = request.getParameter("updateUsername");
         String newEmail = request.getParameter("updateEmail");
         String confirmEmail = request.getParameter("confirmUpdateEmail");
+        User existingUser = usersDao.findByUsername(newUsername);
+        if (existingUser == null){
+            usernameDoesntExist = true;
+        }
 
-        if (newEmail.equals(confirmEmail)) {
+        if (newEmail.equals(confirmEmail) && usernameDoesntExist) {
             DaoFactory.getAdsDao().updateProfile(id, newUsername, newEmail);
             response.sendRedirect("/profile");
         } else {
