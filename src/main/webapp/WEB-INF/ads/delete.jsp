@@ -38,6 +38,7 @@
                                pattern="[A-Za-z0-9]+"
                                required>
                     </div>
+                    <%--Submit Button--%>
                     <div class="w-100 d-flex justify-content-center">
                         <input type="submit" class="loginButton" value="I understand">
                     </div>
