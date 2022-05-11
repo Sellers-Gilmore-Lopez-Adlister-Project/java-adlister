@@ -39,9 +39,12 @@ public class MySQLAdsDao implements Ads {
     public List<Ad> allFromUser(Long id) {
        PreparedStatement stmt = null;
        try{
+           //query to retrieve ads based on user_id that will be retrieved by session user object
            stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id = ?" );
            stmt.setLong(1,id);
+           //execute query and save results
            ResultSet rs = stmt.executeQuery();
+           //run function with rs as parameter
            return createAdsFromResults(rs);
        }
        catch (SQLException e){
@@ -52,13 +55,13 @@ public class MySQLAdsDao implements Ads {
     @Override
     public void destroy(Long id, String title) {
         PreparedStatement stmt = null;
-        System.out.println(id);
-        System.out.println(title);
         try {
+            //query to delete ad based only logged in user has created by title name
             String query = "DELETE FROM ads Where user_id = ? AND title = ?";
             stmt = connection.prepareStatement(query);
             stmt.setLong(1,id);
             stmt.setString(2,title);
+            //execute update of ads table
             stmt.executeUpdate();
         } catch (SQLException e){
             throw new RuntimeException("error deleting ad", e);
@@ -69,12 +72,14 @@ public class MySQLAdsDao implements Ads {
     public void updateAd(Long id, String originalTitle,String title, String description) {
         PreparedStatement stmt = null;
         try {
+            //query to update only ads user logged in has created by title
             String query = "UPDATE ads SET title = ?, description = ? WHERE (user_id = ? AND title = ?)";
             stmt = connection.prepareStatement(query);
             stmt.setString(1,title);
             stmt.setString(2,description);
             stmt.setLong(3,id);
             stmt.setString(4,originalTitle);
+            //execute update to DB
             stmt.executeUpdate();
         } catch (SQLException e){
             throw new RuntimeException("error updating ad", e);
@@ -85,11 +90,13 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Long insert(Ad ad) {
         try {
+            //query to insert new ad into DB
             String insertQuery = "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
             stmt.setString(2, ad.getTitle());
             stmt.setString(3, ad.getDescription());
+            //execute update to DB
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
