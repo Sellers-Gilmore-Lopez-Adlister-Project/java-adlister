@@ -15,16 +15,19 @@ import java.io.IOException;
 public class UpdatePasswordServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //check if user is logged in, if not redirect to login
         if (request.getSession().getAttribute("user") == null) {
             response.sendRedirect("/login");
             return;
         }
+        //pass control to updatePassword.jsp
         request.getRequestDispatcher("/WEB-INF/updatePassword.jsp")
                 .forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //access usersDao
         Users usersDao = DaoFactory.getUsersDao();
 
         //create user object to retrieve id from logged in session
@@ -52,11 +55,13 @@ public class UpdatePasswordServlet extends HttpServlet {
         }
         //if both password sets match run function to update password
         if (oldPasswordsMatch && newPasswordMatch){
+            //hash new password before entering into DB
             String hashedPw = Password.hash(newPassword);
+            //run new hashed pw through function and redirect to profile
             DaoFactory.getUsersDao().updatePassword(id,hashedPw);
-            System.out.println(hashedPw);
             response.sendRedirect("/profile");
         } else {
+            //if either password set doesnt match, redirect to updatePassword page
             response.sendRedirect("/profile/updatePassword");
         }
     }

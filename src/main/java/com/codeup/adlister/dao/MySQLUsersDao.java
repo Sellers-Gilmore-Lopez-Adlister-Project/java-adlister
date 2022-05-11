@@ -38,11 +38,13 @@ public class MySQLUsersDao implements Users {
     public void updateProfile(Long id, String username, String email) {
         PreparedStatement stmt = null;
         try {
+            //query to update username and email for logged in user
             String query = "UPDATE users SET username = ?, email = ? WHERE (id = ?)";
             stmt = connection.prepareStatement(query);
             stmt.setString(1,username);
             stmt.setString(2,email);
             stmt.setLong(3,id);
+            //update data to DB
             stmt.executeUpdate();
         } catch (SQLException e){
             throw new RuntimeException("error updating profile", e);
@@ -70,10 +72,12 @@ public class MySQLUsersDao implements Users {
     public void updatePassword(long id, String newPassword){
         PreparedStatement stmt = null;
         try {
+            //query to update password for logged in user
             String query = "UPDATE users SET password = ? WHERE id = ?";
             stmt = connection.prepareStatement(query);
             stmt.setString(1,newPassword);
             stmt.setLong(2,id);
+            //execute update
             stmt.executeUpdate();
         } catch (SQLException e){
             throw new RuntimeException("error updating password", e);

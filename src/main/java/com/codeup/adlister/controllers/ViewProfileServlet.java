@@ -13,14 +13,18 @@ import java.io.IOException;
 @WebServlet(name = "controllers.ViewProfileServlet", urlPatterns = "/profile")
 public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //check if user is logged in, if not send to login page
         if (request.getSession().getAttribute("user") == null) {
             response.sendRedirect("/login");
             return;
         }
 
+        //retrieve user object and retrieve id
         User user = (User) request.getSession().getAttribute("user");
             Long id = user.getId();
+            //set attribute to run function to display only ads created by the user on their profile page
             request.setAttribute("ads", DaoFactory.getAdsDao().allFromUser(id));
+            //give control to profile.jsp
             request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
     }
 }
