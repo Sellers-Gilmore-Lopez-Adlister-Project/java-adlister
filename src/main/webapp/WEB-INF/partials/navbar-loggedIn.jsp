@@ -9,11 +9,11 @@
         <%-- Right Side - Login/Logout --%>
         <div class="nav navbar-nav navbar-right d-flex flex-row align-items-center">
             <%--Profile --%>
-            <a href="/profile" class="pr-3 text-dark" title="Profile"><i class="fa-solid fa-house-user"></i></a>
+            <a href="/profile" class="text-dark" title="Profile"><i class="fa-solid fa-house-user" style="font-size:1.2em;margin-right:1em;"></i></a>
             <%--Create a user--%>
-            <a href="/ads/create" class="pr-3 text-dark" title="Create an ad"><i class="fa-solid fa-folder-plus"></i></a>
+            <a href="/ads/create" class="text-dark" title="Create an ad"><i class="fa-solid fa-folder-plus" style="font-size:1.2em;margin-right:1em;"></i></a>
             <%--Login--%>
-            <a href="/logout" class="pl-3 text-dark" title="Log Out"><i class="fa-solid fa-right-from-bracket"></i> Log out</a>
+            <a href="/logout" class=" text-dark" title="Log Out"><i class="fa-solid fa-right-from-bracket" style="font-size:1.2em;margin-right:.1em;"></i> Log out</a>
         </div>
     </div>
 </nav>
