@@ -29,7 +29,7 @@
                minlength="4" maxlength="15"
                title="letters and numbers only, no punctuation or special characters and between 4 and 15 characters"
                pattern="^[a-zA-Z][a-zA-Z0-9-_.]{4,15}$"
-               />
+               required/>
           <p class="text-secondary">
             <small>letters and numbers only, no punctuation or special characters, between 4 and 15 characters</small>
           </p>
@@ -44,7 +44,7 @@
                minlength="6" maxlength="254"
                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                title="Please provide a valid email"
-               />
+               required/>
       </div>
       <%--Confirm your Email--%>
       <div class="form-group">
@@ -52,10 +52,10 @@
         <input id="confirmUpdateEmail"
                name="confirmUpdateEmail"
                class="form-control loginInput"
-               min="6" maxlength="15"
-               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+               min="6" maxlength="254"
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                title="at least one number and one uppercase and lowercase letter, and at least 6 or more characters"
-               />
+               required/>
       </div>
       <input type="submit" class=" w-100 loginButton btn btn-primary btn-block mt-3">
         <p class="text-secondary text-center pt-1">
