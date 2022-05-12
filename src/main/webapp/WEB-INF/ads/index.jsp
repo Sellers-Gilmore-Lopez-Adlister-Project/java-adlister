@@ -49,6 +49,9 @@ This page is when click on 'ADLISTER', you will see all ads that is in out datab
                             <h4 class="card-title text-dark pb-1 pr-5 m-0">${ad.title}</h4>
                             <hr>
                             <p class="card-text py-1 text-dark">${ad.description}</p>
+                            <footer>
+                                ${ad.contact_info}
+                            </footer>
                         </div>
                     </div>
                 </div>
