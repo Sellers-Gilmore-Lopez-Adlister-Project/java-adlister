@@ -44,6 +44,20 @@
                         <small>Limit 200 characters</small>
                     </p>
                 </div>
+                <%--Contact info--%>
+                    <div class="form-group">
+                        <label for="contactInfo" class="">Contact Info</label>
+                        <textarea id="contactInfo"
+                                  name="contactInfo"
+                                  class="form-control"
+                                  type="text"
+                                  minlength="3" maxlength="200"
+                                  required>
+                    </textarea>
+                        <p class="text-secondary">
+                            <small>Limit 200 characters</small>
+                        </p>
+                    </div>
                 <%----- Submit Button of Ad  --%>
                 <input type="submit" class="btn w-100 btn-block btn-primary loginButton" value="Create Ad">
             </form>

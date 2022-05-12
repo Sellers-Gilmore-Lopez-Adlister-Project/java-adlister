@@ -47,7 +47,7 @@ public class UpdateProfileServlet extends HttpServlet {
         if (newEmail.equals(confirmEmail) && usernameDoesntExist) {
             DaoFactory.getUsersDao().updateProfile(id, newUsername, newEmail);
             //redirect to profile after finishing update
-            response.sendRedirect("/profile");
+            response.sendRedirect("/logout");
         } else {
             //if emails dont match or username taken, redirect to update page
             response.sendRedirect("/profile/update");
