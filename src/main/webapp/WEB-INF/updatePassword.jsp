@@ -33,7 +33,7 @@
                 <%----- New Password --%>
                 <div class="form-group">
                     <label for="newPassword">New Password:</label>
-                    <input id="newPassword"
+                    <input id="newPassword" name="newPassword"
                            class="form-control loginInput"
                            type="password"
                            min="6" maxlength="15"
