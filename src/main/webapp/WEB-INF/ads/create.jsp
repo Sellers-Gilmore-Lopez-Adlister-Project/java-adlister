@@ -23,11 +23,11 @@
                            class="form-control loginInput"
                            type="text"
                            maxlength="45"
-                           title="letters and numbers only, no punctuation or special characters, and between 4 - 45 characters"
-                           pattern="[A-Za-z0-9]+"
+                           title="letters and numbers only, no punctuation or special characters, and a max of 45 characters"
+<%--                           pattern="[A-Za-z0-9]{1,45}"--%>
                            required>
                     <p class="text-secondary">
-                        <small>letters and numbers only, no punctuation or special characters, and between 4 - 45 characters</small>
+                        <small>letters and numbers only, no punctuation or special characters, and a max 45 characters</small>
                     </p>
                 </div>
                 <%----- Description of Ad  --%>
@@ -45,7 +45,7 @@
                     </p>
                 </div>
                 <%----- Submit Button of Ad  --%>
-                <input type="submit" class="btn btn-block btn-primary loginButton" value="Create Ad">
+                <input type="submit" class="btn w-100 btn-block btn-primary loginButton" value="Create Ad">
             </form>
     </div>
 </body>

@@ -35,12 +35,11 @@
                                class="form-control loginInput"
                                type="text"
                                maxlength="45"
-                               pattern="[A-Za-z0-9]+"
                                required>
                     </div>
                     <%--Submit Button--%>
-                    <div class="w-100 d-flex justify-content-center">
-                        <input type="submit" class="loginButton" value="I understand">
+                    <div class="w-100 mt-2 d-flex justify-content-center">
+                        <input type="submit" class="w-100 loginButton" value="I understand">
                     </div>
                 </form>
     </div>

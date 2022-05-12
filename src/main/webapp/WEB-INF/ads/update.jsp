@@ -28,7 +28,6 @@
                            type="text"
                            maxlength="45"
                            title="letters and numbers only, no punctuation or special characters, and no more than 45 characters"
-                           pattern="[A-Za-z0-9]+"
                            required>
                 </div>
                 <%--New Title--%>
@@ -48,14 +47,15 @@
                               name="description"
                               class="form-control"
                               type="text"
-                              maxlength="200">
+                              maxlength="200"
+                              required>
                     </textarea>
                     <p class="text-secondary">
                         <small>Limit 200 characters</small>
                     </p>
                 </div>
                 <%--Submit Button--%>
-                <input type="submit" class="loginButton btn btn-block btn-primary" value="Update">
+                <input type="submit" class="w-100 loginButton btn btn-block btn-primary" value="Update">
             </form>
         </div>
 
