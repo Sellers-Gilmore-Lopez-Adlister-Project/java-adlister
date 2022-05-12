@@ -29,6 +29,11 @@
                 <textarea id="description" name="description" class="form-control" type="text" maxlength="200" required></textarea>
                 <p class="text-secondary"><small>Limit 200 characters</small></p>
             </div>
+            <div class="form-group">
+                <label for="contactInfo" class="text-dark">Contact Info</label>
+                <textarea id="contactInfo" name="contactInfo" class="form-control" type="text" maxlength="200" required></textarea>
+                <p class="text-secondary"><small>Limit 200 characters</small></p>
+            </div>
             <input type="submit" class="btn btn-block btn-primary loginButton" value="Create user">
         </form>
     </div>

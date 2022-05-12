@@ -45,6 +45,9 @@
                             <h4 class="card-title text-dark pb-2 m-0">${ad.title}</h4>
                             <hr class="w-75 m-0 py-1">
                             <p class="card-text py-1 text-dark">${ad.description}</p>
+                            <footer>
+                                ${ad.contact_info}
+                            </footer>
                         </div>
                     </div>
                 </div>

@@ -5,12 +5,20 @@ public class Ad {
     private long userId;
     private String title;
     private String description;
+    private String contact_info;
 
     public Ad(long id, long userId, String title, String description) {
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
+    }
+
+    public Ad(long userId, String title, String description,String contact_info) {
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.contact_info = contact_info;
     }
 
     public Ad(long userId, String title, String description) {
@@ -49,5 +57,13 @@ public class Ad {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setContact_info(String contact_info) {
+        this.contact_info = contact_info;
+    }
+
+    public String getContact_info() {
+        return contact_info;
     }
 }
