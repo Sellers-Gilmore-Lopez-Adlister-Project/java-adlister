@@ -8,7 +8,7 @@
 <body>
     <jsp:include page="partials/navbar.jsp" />
 
-    <%--user form--%>
+    <%--user form container--%>
     <div class="container formContainer">
         <%--Header--%>
         <h1 class="pt-3 text-center">Let's get Started.</h1>
@@ -72,7 +72,7 @@
                                    title="at least one number and one uppercase and lowercase letter, and at least 6 or more characters"
                                    required>
                         </div>
-                        <input type="submit" class="loginButton mx-auto btn btn-primary btn-block">
+                        <input type="submit" class=" w-100 loginButton btn btn-primary btn-block mt-3">
                         <p class="noAccountPara pt-2 text-center">Already a member? <a href="/login">Login</a> </p>
             </form>
     </div>

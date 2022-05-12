@@ -41,7 +41,7 @@
                            required>
                 </div>
                 <%----- Submit Button --%>
-                <input type="submit" class="loginButton" value="Log In">
+                    <input type="submit" class=" w-100 loginButton btn btn-primary btn-block mt-3">
             </form>
         </div>
     </body>
