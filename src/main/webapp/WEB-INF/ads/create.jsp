@@ -34,7 +34,7 @@
                 <textarea id="contactInfo" name="contactInfo" class="form-control" type="text" maxlength="200" required></textarea>
                 <p class="text-secondary"><small>Limit 200 characters</small></p>
             </div>
-            <input type="submit" class="btn btn-block btn-primary loginButton" value="Create user">
+            <input type="submit" class="btn btn-block btn-primary loginButton" value="Create Ad">
         </form>
     </div>
 </body>

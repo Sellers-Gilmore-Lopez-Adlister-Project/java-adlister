@@ -27,6 +27,15 @@ public class Ad {
         this.description = description;
     }
 
+    public Ad(long id, long userId, String title, String description, String contact_info) {
+        this.id = id;
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.contact_info = contact_info;
+
+    }
+
     public long getId() {
         return id;
     }
